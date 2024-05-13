@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cppwpkkftkrab"]
+[gd_scene load_steps=22 format=3 uid="uid://cppwpkkftkrab"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_70npx"]
 [ext_resource type="PackedScene" uid="uid://bbbuqfrotswdx" path="res://scenes/player.tscn" id="1_usu6t"]
@@ -514,6 +514,15 @@ _data = {
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qri5j"]
 distance = -185.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1y5pp"]
+size = Vector2(1000, 1000)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ve7ys"]
+size = Vector2(1000, 1000)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c6wfv"]
+size = Vector2(1000, 1000)
+
 [node name="Game" type="Node2D"]
 
 [node name="GameManager" type="Node" parent="."]
@@ -666,3 +675,52 @@ offset_bottom = 55.0
 theme_override_fonts/font = ExtResource("9_h0mmt")
 theme_override_font_sizes/font_size = 24
 text = "Coins:"
+
+[node name="LeftTouchButtom" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(204, 932)
+scale = Vector2(0.345407, -0.2932)
+shape = SubResource("RectangleShape2D_1y5pp")
+action = "move_left"
+
+[node name="RightTouchButtom" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(590, 927)
+scale = Vector2(0.373308, -0.288625)
+shape = SubResource("RectangleShape2D_ve7ys")
+action = "move_right"
+
+[node name="JumpTouchButtom" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(1949, 959)
+rotation = -1.5708
+scale = Vector2(0.307361, -0.328264)
+shape = SubResource("RectangleShape2D_c6wfv")
+action = "jump"
+
+[node name="Left_Text_but" type="Label" parent="CanvasLayer"]
+offset_left = 93.0
+offset_top = 888.0
+offset_right = 133.0
+offset_bottom = 911.0
+scale = Vector2(7.9181, 8.88499)
+theme_override_fonts/font = ExtResource("7_if3ay")
+theme_override_font_sizes/font_size = 8
+text = "Left"
+
+[node name="Right_Text_but" type="Label" parent="CanvasLayer"]
+offset_left = 456.0
+offset_top = 883.0
+offset_right = 496.0
+offset_bottom = 906.0
+scale = Vector2(7.9181, 8.88499)
+theme_override_fonts/font = ExtResource("7_if3ay")
+theme_override_font_sizes/font_size = 8
+text = "Right"
+
+[node name="Jump_Text_but" type="Label" parent="CanvasLayer"]
+offset_left = 1819.0
+offset_top = 913.0
+offset_right = 1859.0
+offset_bottom = 936.0
+scale = Vector2(7.9181, 8.88499)
+theme_override_fonts/font = ExtResource("7_if3ay")
+theme_override_font_sizes/font_size = 8
+text = "Jump"
