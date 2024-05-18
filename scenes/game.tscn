@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cppwpkkftkrab"]
+[gd_scene load_steps=31 format=3 uid="uid://cppwpkkftkrab"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_70npx"]
 [ext_resource type="PackedScene" uid="uid://bbbuqfrotswdx" path="res://scenes/player.tscn" id="1_usu6t"]
@@ -525,6 +525,21 @@ size = Vector2(143, 65)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4jkjo"]
 size = Vector2(209, 64)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dtwm3"]
+size = Vector2(190, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_71inq"]
+size = Vector2(144, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vnsao"]
+size = Vector2(14, 62)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cc77e"]
+size = Vector2(31, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8isfy"]
+size = Vector2(16, 47)
+
 [node name="Game" type="Node2D"]
 
 [node name="GameManager" type="Node" parent="."]
@@ -752,3 +767,33 @@ shape = SubResource("RectangleShape2D_p7iit")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainColliders/StaticBody2D3"]
 position = Vector2(727.5, 47)
 shape = SubResource("RectangleShape2D_4jkjo")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="TerrainColliders"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainColliders/StaticBody2D4"]
+position = Vector2(528, 119.5)
+shape = SubResource("RectangleShape2D_dtwm3")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="TerrainColliders"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainColliders/StaticBody2D5"]
+position = Vector2(744, 135)
+shape = SubResource("RectangleShape2D_71inq")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="TerrainColliders"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainColliders/StaticBody2D6"]
+position = Vector2(824, 111)
+shape = SubResource("RectangleShape2D_vnsao")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="TerrainColliders"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainColliders/StaticBody2D7"]
+position = Vector2(640.5, 103)
+shape = SubResource("RectangleShape2D_cc77e")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="TerrainColliders"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TerrainColliders/StaticBody2D8"]
+position = Vector2(664, 119.5)
+shape = SubResource("RectangleShape2D_8isfy")
